@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3264171272">
+    <data-source source="LOCAL" name="H2 - test;AUTO_SERVER=TRUE" uuid="787f5c59-ad2a-43d8-bd8d-a3363968f45c">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:jdbc:h2:~/ideaProjects/h2db/test;AUTO_SERVER=TRUE</jdbc-url>
+      <user-name>sa</user-name>
+      <schema-pattern>*</schema-pattern>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="H2  dbv" uuid="5d64dd4c-da41-4d06-afd3-a5cccdbdaf53">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:jdbc:h2:~/ideaProjects/h2db/dbv;AUTO_SERVER=TRUE</jdbc-url>
+      <user-name>sa</user-name>
+      <schema-pattern>*</schema-pattern>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

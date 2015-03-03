@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dataview.iml" filepath="$PROJECT_DIR$/dataview.iml" />
       <module fileurl="file://$PROJECT_DIR$/dataview-dao/dataview-dao.iml" filepath="$PROJECT_DIR$/dataview-dao/dataview-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataview-web/dataview-web.iml" filepath="$PROJECT_DIR$/dataview-web/dataview-web.iml" />
     </modules>
   </component>
 </project>

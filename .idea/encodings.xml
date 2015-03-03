@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/java/com/dbv/user/LoginController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/resources/application.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/resources/security/ehcache-shiro.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/WEB-INF/decorators.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/WEB-INF/layouts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/WEB-INF/views/error" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/WEB-INF/views/index.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/WEB-INF/views/login.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/static/images" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/static/jquery" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/static/jquery-validation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataview-web/src/main/webapp/static/styles" charset="UTF-8" />
+  </component>
 </project>
 
