@@ -22186,7 +22186,7 @@ var ngControllerDirective = [function() {
               });
         </file>
         <file name="protractor.js" type="protractor">
-          var util, webdriver;
+          var utils, webdriver;
 
           var incBtn = element(by.id('inc'));
           var counter = element(by.id('counter'));
@@ -22209,7 +22209,7 @@ var ngControllerDirective = [function() {
             getAndClearSevereErrors().then(function(filteredLog) {
               expect(filteredLog.length).toEqual(0);
               if (filteredLog.length) {
-                console.log('browser console errors: ' + util.inspect(filteredLog));
+                console.log('browser console errors: ' + utils.inspect(filteredLog));
               }
             });
           }
@@ -22229,7 +22229,7 @@ var ngControllerDirective = [function() {
           }
 
           beforeEach(function() {
-            util = require('util');
+            utils = require('utils');
             webdriver = require('protractor/node_modules/selenium-webdriver');
           });
 

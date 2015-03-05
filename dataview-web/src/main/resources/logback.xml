@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<jmxConfigurator />
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+
+
+	<!-- project default level -->
+	<logger name="com.dbv" level="INFO" />
+	
+
+
+	<!--log4jdbc -->
+	<logger name="jdbc.sqltiming" level="DEBUG"/>
+
+	
+	<!-- cxf inbound/outbound logger -->
+	<!-- <logger name="org.apache.cxf.services" level="INFO" /> -->
+
+	<!-- root -->
+	<root level="WARN">
+		<appender-ref ref="console" />
+	</root>
+</configuration>

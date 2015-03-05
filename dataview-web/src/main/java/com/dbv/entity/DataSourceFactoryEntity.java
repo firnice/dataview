@@ -1,10 +1,14 @@
 package com.dbv.entity;
 
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 /**
  * Created by firnice on 15/3/3.
  */
+@DynamicUpdate(value=true)
 @Entity
 @Table(name = "DATA_SOURCE_FACTORY", schema = "PUBLIC", catalog = "DBV")
 public class DataSourceFactoryEntity {
@@ -15,7 +19,9 @@ public class DataSourceFactoryEntity {
     private String userpassword;
 
     @Id
-    @Column(name = "ID")
+    @GeneratedValue(generator = "ID")
+    @GenericGenerator(name = "ID", strategy = "uuid")
+    @Column(name = "ID", unique = true, nullable = false, length = 32)
     public String getId() {
         return id;
     }
