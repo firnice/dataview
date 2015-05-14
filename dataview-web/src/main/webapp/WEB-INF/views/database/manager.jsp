@@ -17,9 +17,15 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    添加
-</button>
+
+<form class="form-search" action="#">
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        添加
+    </button>
+    <button type="submit" id="query_btn" class="btn btn-primary btn-lg">
+        查询
+    </button>
+</form>
 
 <table class="table table-striped">
     <thead>
@@ -28,33 +34,27 @@
             driver
         </td>
         <td>
-            driver
+            url
         </td>
         <td>
-            driver
+            username
         </td>
         <td>
-            driver
+            password
         </td>
 
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>
-            driver
-        </td>
-        <td>
-            driver
-        </td>
-        <td>
-            driver
-        </td>
-        <td>
-            driver
-        </td>
 
-    </tr>
+    <c:forEach items="${databases}" var="database">
+        <tr>
+            <td>${database.driver}&nbsp;</td>
+            <td>${database.urlstr}&nbsp;</td>
+            <td>${database.username}&nbsp;</td>
+            <td>${database.userpassword}&nbsp;</td>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 
@@ -68,52 +68,75 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
             </div>
-            <div class="modal-body">
-                <form id="form" class="form-horizontal">
+            <form id="form" modelAttribute="dataSourceFactoryDto" action="${ctx}/database/manager/save" method="post"
+                  class="form-horizontal">
+                <div class="modal-body">
+
                     <div class="form-group">
                         <label for="input_driver" class="col-sm-2 control-label">driver</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="input_driver" name="driver" placeholder="driver">
+                            <input type="text" class="form-control" id="input_driver" name="driver"
+                                   placeholder="driver">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="input_urlstr" class="col-sm-2 control-label">urlstr</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="input_urlstr" name="urlstr" placeholder="urlstr">
+                            <input type="text" class="form-control" id="input_urlstr" name="urlstr"
+                                   placeholder="urlstr">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="input_username" class="col-sm-2 control-label">username</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="input_username" name="username" placeholder="username">
+                            <input type="text" class="form-control" id="input_username" name="username"
+                                   placeholder="username">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="input_userpassword" class="col-sm-2 control-label">userpassword</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="input_userpassword" name="userpassword" placeholder="userpassword">
+                            <input type="text" class="form-control" id="input_userpassword" name="userpassword"
+                                   placeholder="userpassword">
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="save()">Save changes</button>
-            </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="save()">Save changes</button>
+                </div>
+            </form>
         </div>
     </div>
+    L
 </div>
 
 
 <script>
     function save() {
-        $.post('${ctx}/database/manager/save', $("#form").serialize());
+        $.post('${ctx}/database/manager/save', $("#form").serialize(), function (data) {
+            if (data == 'sucess') {
+                $('#myModal').modal('hide')
+                alert("sucess!")
+                $("#query_btn").click();
+            }})
+
 
     }
+
+
+    $(function () {
+
+        $("#query_btn").bind("click", function () {
+
+        })
+
+    });
 </script>
 </body>
 </html>
