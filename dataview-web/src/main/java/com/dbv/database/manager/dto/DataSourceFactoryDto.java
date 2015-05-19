@@ -1,7 +1,5 @@
 package com.dbv.database.manager.dto;
 
-import javax.persistence.*;
-
 /**
  * Created by firnice on 15/3/3.
  */

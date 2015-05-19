@@ -16,6 +16,6 @@
 * ##所用技术
  前端 bootsrap avalon
  web spring mvc
- 数据库 h2
+ 数据库 h2 ,postgreSql
  数据库框架 jpa
 
